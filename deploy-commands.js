@@ -1,16 +1,26 @@
-const {REST, Routes} = require('discord.js');
+const {REST, Routes, ApplicationCommandType, ApplicationCommand, ApplicationCommandOptionType} = require('discord.js');
 require('dotenv').config();
 
 const commands = [
     {
-        name: 'yo',
-        description: 'yo',
+        name: 'getidfronname',
+        description: 'getidfronname',
+        options: [
+            {
+                name: 'input',
+                description: 'Enter bungie name',
+                type: ApplicationCommandOptionType.String,
+                require: true,
+            }
+        ],
+        require: true,
     },
     {
         name: 'test',
         description: 'Test command',
     },
 ];
+
 
 const rest = new REST({ version: '10' }).setToken(process.env.TOKEN);
 
@@ -28,5 +38,6 @@ const rest = new REST({ version: '10' }).setToken(process.env.TOKEN);
 
     } catch (error) {
         console.log('there was an  error');
+        console.log(error);
     }
 })();

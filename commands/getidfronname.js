@@ -1,17 +1,19 @@
 const { SlashCommandBuilder } = require('discord.js');
 const axios = require('axios');
 const apiUrl = 'https://www.bungie.net/Platform/Destiny2/3/Profile/4611686018522440454/?components=100,200';
-const header = {'X-API-Key': process.env.XAPIkey_ID};
+const header = {'X-API-Key':process.env.XAPIkey_ID};
 
 module.exports = {
 	data: new SlashCommandBuilder()
-		.setName('yo')
-		.setDescription('yo'),
+		.setName('getidfronname')
+		.setDescription('getidfronname')
+		.addStringOption(option =>
+			option.setName('input')),
 	async execute(interaction) {
-		// await interaction.reply('Yo!');
 		var bungieGlobalDisplayName;
 		var bungieGlobalDisplayNameCode;
-		await axios.get(apiUrl, { header })
+		// await axios.get(apiUrl, { header })
+		await await axios.get(apiUrl, {header})
 		.then((response) => {
 			console.log(response.data);
 			bungieGlobalDisplayName = response.data.Response.profile.data.userInfo.bungieGlobalDisplayName;	
@@ -23,7 +25,7 @@ module.exports = {
 			// Handle any errors that occurred during the request
 			console.error(error);
 		});
-		
-		console.log();
+		// const text = interaction.options.get('input');
+		// console.log(text.value);
 	},
 };

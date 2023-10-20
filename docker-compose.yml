@@ -1,0 +1,16 @@
+version: '3'
+services:
+  app:
+    container_name: dcbot
+    build: .
+    environment:
+      - TOKEN=MTExNTU1NzUxMTAzOTI5MTQxMg.G-ZfFP.E7FNgcBCk3LRy_e6QO-I6euMSIgipcT5p8_dok
+      - GUILD_ID=1115558393613123655
+      - CLIENT_ID=1115557511039291412
+      - XAPIkey_ID=fa9fc3f71d504891999d9eca7f10f958
+
+    
+
+
+      
+  
