@@ -7,5 +7,6 @@ ENV XAPIkey_ID =
 
 COPY . .
 
+RUN npm install
 
 CMD [ "node", "index.js" ]
