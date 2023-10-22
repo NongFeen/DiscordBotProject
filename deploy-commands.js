@@ -19,6 +19,19 @@ const commands = [
         name: 'test',
         description: 'Test command',
     },
+    {
+        name: 'playtime',
+        description: 'playtime',
+        options: [
+            {
+                name: 'input',
+                description: 'Enter bungie name',
+                type: ApplicationCommandOptionType.String,
+                require: true,
+            }
+        ],
+        require: true,
+    },
 ];
 
 
