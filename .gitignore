@@ -132,5 +132,3 @@ dist
 #docker
 .docker-compose.yml
 docker-compose.yml
-dockerfile
-.dockerfile
