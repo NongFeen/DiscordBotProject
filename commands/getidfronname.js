@@ -28,7 +28,7 @@ async execute(interaction) {
   let found =false;
   console.log(bungieGlobalDisplayName + "  " + bungieGlobalDisplayNameCode);
   console.log(`${apiUrl}${page}`);
-
+  const msg = await interaction.reply("fetching data...")
   try {
     while (!found) {
       const response = await axios.post(`${apiUrl}${page}`, { "displayNamePrefix": bungieGlobalDisplayName }, { headers });
@@ -64,16 +64,16 @@ async execute(interaction) {
     if (membershipId) {
       // Reply back to the interaction with the membershipId
       let str = `Membership ID for ${bungieGlobalDisplayName}#${bungieGlobalDisplayNameCode} is ${membershipId}`;
-      await interaction.reply(str);
+      await msg.edit(str);
     } else {
     //   // Reply back if no matching entry is found
-      await interaction.reply(`No matching entry found for ${bungieGlobalDisplayName}#${bungieGlobalDisplayNameCode}`);
+      await msg.edit(`No matching entry found for ${bungieGlobalDisplayName}#${bungieGlobalDisplayNameCode}`);
     }
     
   } catch (error) {
     // console.error('Error:', error);
     // Handle and reply with an error message
-    await interaction.reply('An error occurred while fetching the data from Bungie API.');
+    await msg.edit('An error occurred while fetching the data from Bungie API.');
   }
 }
 };

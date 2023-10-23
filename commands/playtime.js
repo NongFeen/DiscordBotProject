@@ -57,7 +57,7 @@ async execute(interaction) {
                     const characters = profileResponse.data.Response.characters.data;
                     for (const characterId in characters) {
                         totalPlaytime += parseInt(characters[characterId].minutesPlayedTotal);
-                        console.log("bug here| Playtime = "+ totalPlaytime.toString());
+                        console.log(/*"bug here| Playtime = "+*/ totalPlaytime.toString());
                     }
                 } catch (error) {
                     console.log("No character found");
