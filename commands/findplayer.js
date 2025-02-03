@@ -1,6 +1,6 @@
 const { SlashCommandBuilder } = require('discord.js');
 require('dotenv').config();
-const axios = require('axios');
+const axios = require('axios'); 
 
 const API_KEY = process.env.XAPIkey_ID ; // Replace with your actual API key
 const START_GAME_ID = process.env.StartGameID;// 15851419985; //->15851443084
