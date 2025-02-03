@@ -32,6 +32,19 @@ const commands = [
         ],
         require: true,
     },
+    {
+        name: 'findteamscore',
+        description: 'findteamScore from pgcr',
+        options: [
+            {
+                name: 'pgcr',
+                description: 'Enter pgcr',
+                type: ApplicationCommandOptionType.Integer,
+                require: true,
+            }
+        ],
+        require: true,
+    },
 ];
 
 
