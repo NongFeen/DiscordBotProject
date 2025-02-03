@@ -3,8 +3,8 @@ require('dotenv').config();
 const axios = require('axios'); 
 
 const API_KEY = process.env.XAPIkey_ID ; // Replace with your actual API key
-const START_GAME_ID = process.env.StartGameID;// 15851419985; //->15851443084
-const TARGET_SCORE = process.env.TargetScore; // 
+let START_GAME_ID = parseInt(process.env.startGameId);// 15851419985; //->15851443084
+const TARGET_SCORE = parseInt(process.env.TargetScore); // 
 const REQUESTS_PER_SECOND = 100;
 
 async function fetchGameData(gameId) {
