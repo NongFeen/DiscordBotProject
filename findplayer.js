@@ -3,7 +3,7 @@ require('dotenv').config();
 const axios = require('axios'); 
 
 const API_KEY = process.env.XAPIkey_ID; 
-let START_GAME_ID_FORWARD = 15851419984; 
+let START_GAME_ID_FORWARD = 15853247284; //15853247284
 let START_GAME_ID_BACKWARD = 15851395725; 
 const TARGET_SCORE = 304788; 
 const SEARCH_RANGE = 50; 
