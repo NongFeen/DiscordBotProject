@@ -132,3 +132,5 @@ dist
 #docker
 .docker-compose.yml
 docker-compose.yml
+
+.TaptitanSocketConnect.js

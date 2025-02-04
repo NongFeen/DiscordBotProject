@@ -4,8 +4,8 @@ const { io } = require('socket.io-client');
 const SERVER_URL = 'https://tt2-public.gamehivegames.com/api';
 
 // Define the API key
-const API_KEY = 'THISTOKEN HAVE BEEN REVOKE'; // Replace with your actual API key 
-// fuck me revoke this token LLLL
+const API_KEY = '71e8e898-4888-4f95-8845-40a3bf368abd'; // Replace with your actual API key 
+// fuck me revoke this token 
 
 // Connect to the Socket.IO server
 const socket = io(SERVER_URL, {
